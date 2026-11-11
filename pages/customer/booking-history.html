@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat Pemesanan — BarberBook A3HAIRSTUDIO</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/customer.css">
+</head>
+<body>
+
+  <!-- TOPBAR MOBILE -->
+  <div class="app-topbar-mobile">
+    <a href="../../index.html" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
+      <img src="../../assets/images/logo.svg" alt="BarberBook" style="height:30px;width:auto;">
+    </a>
+    <button type="button" class="hamburger-btn" id="mobile-hamburger-btn" aria-label="Buka Menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebar-overlay-el"></div>
+
+  <div class="app-shell">
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar" id="app-sidebar-el">
+      <div class="sidebar-header">
+        <a href="../../index.html" class="sidebar-logo">
+          <img src="../../assets/images/logo.svg" alt="BarberBook" style="height:32px;width:auto;">
+          <div>
+            <div class="sidebar-logo-text">BarberBook</div>
+            <div class="sidebar-logo-sub">A3HAIRSTUDIO</div>
+          </div>
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-title">Menu Pelanggan</div>
+        <a href="./dashboard.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+          <span>Dasbor Member</span>
+        </a>
+        <a href="./booking.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+          <span>Pesan Jadwal</span>
+        </a>
+        <a href="./booking-history.html" class="sidebar-nav-link active">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+          <span>Riwayat Pemesanan</span>
+        </a>
+        <a href="./loyalty.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+          <span>Poin Loyalitas</span>
+        </a>
+        <a href="./rewards.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          <span>Hadiah Member</span>
+        </a>
+
+        <div class="sidebar-nav-title">Navigasi</div>
+        <a href="../../index.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m7-7m-7 7h18"></path></svg>
+          <span>Kembali ke Halaman Utama</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-avatar" id="sidebar-user-avatar">M</div>
+          <div class="sidebar-user-details">
+            <div class="sidebar-user-name" id="sidebar-user-name">Member BarberBook</div>
+            <div class="sidebar-user-role" id="sidebar-user-role">Member A3HAIRSTUDIO</div>
+          </div>
+        </div>
+        <button type="button" class="sidebar-logout-btn" id="sidebar-logout-btn" title="Keluar">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+        </button>
+      </div>
+    </aside>
+
+    <div class="app-content-wrapper">
+      <main class="app-main">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div class="brand-kicker">CATATAN TRANSAKSI</div>
+            <h1 style="font-size: 1.875rem; margin-top: 0.25rem;">Riwayat Pemesanan</h1>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Daftar seluruh jadwal reservasi dan status verifikasi pembayaran Anda.
+            </p>
+          </div>
+          <a href="booking.html" class="btn btn-primary">
+            + Pesan Jadwal Baru
+          </a>
+        </div>
+
+        <!-- Panel Pencarian Tiket jika Mode Guest -->
+        <div id="guest-lookup-panel" style="display: none; margin-bottom: 2rem;">
+          <div class="card" style="padding: 1.25rem 1.5rem; background: var(--color-surface-subtle);">
+            <div style="font-weight: 700; margin-bottom: 0.5rem; font-size: 0.9375rem;">Lacak Tiket Anda (Guest):</div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <input type="text" id="history-search-input" class="form-input" placeholder="Ketik Kode Booking (cth: A3-2026-1002) atau No. WhatsApp..." style="max-width: 360px;">
+              <button type="button" id="btn-search-history" class="btn btn-secondary">Cari Tiket</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabel Riwayat Pemesanan -->
+        <div class="card">
+          <div class="card-body" style="padding: 0;">
+            <div class="table-responsive" style="border: none;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Kode Booking</th>
+                    <th>Layanan</th>
+                    <th>Kapster</th>
+                    <th>Jadwal Kunjungan</th>
+                    <th>Metode Bayar</th>
+                    <th>Status Bayar</th>
+                    <th>Status Pemesanan</th>
+                    <th>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody id="bookings-history-tbody">
+                  <!-- Rendered by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <div>
+          &copy; 2026 <strong>A3HAIRSTUDIO</strong> · BarberBook. Seluruh hak cipta dilindungi.
+        </div>
+        <div style="display:flex;gap:1rem;color:var(--color-text-muted);flex-wrap:wrap;">
+          <span>Senin - Minggu: 09.00 - 21.00 WIB</span>
+          <span>·</span>
+          <span>0812-3456-7890</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script type="module">
+    import { Auth, ROLES, Storage, STORAGE_KEYS, formatDate, formatRupiah } from '../../assets/js/common.js';
+    import { Booking } from '../../assets/js/customer.js';
+
+    const user = Auth.getCurrentUser();
+    const tbody = document.getElementById('bookings-history-tbody');
+    const guestPanel = document.getElementById('guest-lookup-panel');
+    const searchInput = document.getElementById('history-search-input');
+    const searchBtn = document.getElementById('btn-search-history');
+
+    let bookingsToShow = [];
+
+    if (user && user.role === ROLES.MEMBER) {
+      bookingsToShow = Booking.getByMemberId(user.id);
+    } else {
+      if (guestPanel) guestPanel.style.display = 'block';
+      if (user && user.phone) {
+        bookingsToShow = Booking.getAll().filter(b => b.customerPhone === user.phone);
+      } else {
+        bookingsToShow = Booking.getAll().slice(0, 5);
+      }
+    }
+
+    function renderTable(list) {
+      if (!tbody) return;
+      if (list.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="8" style="text-align:center;padding:3rem;color:var(--color-text-muted);">
+              Tidak ada data pemesanan yang ditemukan.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = list.map(b => `
+        <tr>
+          <td><strong class="tabular">${b.bookingCode}</strong></td>
+          <td>
+            <div style="font-weight:700;">${b.serviceName}</div>
+            <div style="font-size:0.75rem;color:var(--color-accent);" class="amount">${formatRupiah(b.servicePrice)}</div>
+          </td>
+          <td><strong>${b.kapsterName}</strong></td>
+          <td>${formatDate(b.date)}<br><span style="font-weight:600;">${b.time} WIB</span></td>
+          <td>${b.paymentMethod}</td>
+          <td>
+            <span class="status-badge status-${b.paymentStatus.toLowerCase()}">${b.paymentStatus}</span>
+          </td>
+          <td>
+            <span class="status-badge status-scheduled">${b.bookingStatus}</span>
+          </td>
+          <td>
+            <div style="display:flex;gap:0.375rem;">
+              <a href="booking-detail.html?id=${b.id}" class="btn btn-outline btn-sm">Tiket</a>
+              ${b.paymentStatus === 'Pending' ? `
+                <a href="payment.html?id=${b.id}" class="btn btn-primary btn-sm">Bayar</a>
+              ` : ''}
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    renderTable(bookingsToShow);
+
+    // Set info user di sidebar
+    if (user) {
+      const avatarEl = document.getElementById('sidebar-user-avatar');
+      const nameEl = document.getElementById('sidebar-user-name');
+      const roleEl = document.getElementById('sidebar-user-role');
+      const members = Storage.get(STORAGE_KEYS.MEMBERS, []);
+      const m = members.find(item => item.id === user.id) || user;
+
+      if (avatarEl) avatarEl.textContent = user.avatar || user.name.charAt(0);
+      if (nameEl) nameEl.textContent = user.name;
+      if (roleEl) roleEl.textContent = `Member · ★ ${m.points || 0} Pts`;
+    }
+
+    document.getElementById('sidebar-logout-btn')?.addEventListener('click', () => {
+      Auth.logout();
+      window.location.href = '../../index.html';
+    });
+
+    searchBtn?.addEventListener('click', () => {
+      const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      if (!q) {
+        renderTable(bookingsToShow);
+        return;
+      }
+      const filtered = Booking.getAll().filter(b =>
+        b.bookingCode.toLowerCase().includes(q) ||
+        b.customerPhone.includes(q) ||
+        b.customerName.toLowerCase().includes(q)
+      );
+      renderTable(filtered);
+    });
+
+    const hamburgerBtn = document.getElementById('mobile-hamburger-btn');
+    const sidebarEl = document.getElementById('app-sidebar-el');
+    const overlayEl = document.getElementById('sidebar-overlay-el');
+
+    if (hamburgerBtn && sidebarEl && overlayEl) {
+      const toggle = () => {
+        sidebarEl.classList.toggle('open');
+        overlayEl.classList.toggle('open');
+      };
+      hamburgerBtn.addEventListener('click', toggle);
+      overlayEl.addEventListener('click', toggle);
+    }
+  </script>
+</body>
+</html>

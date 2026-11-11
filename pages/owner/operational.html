@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info Operasional — BarberBook A3HAIRSTUDIO</title>
+  <!-- Favicon & Stylesheet Utama -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/owner.css">
+</head>
+<body>
+  <!-- ========================================================================= -->
+  <!-- HEADER MOBILE (Hanya tampil pada layar smartphone)                        -->
+  <!-- ========================================================================= -->
+  <header class="mobile-topbar" id="mobile-topbar">
+    <button type="button" class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Buka Menu Navigasi">
+      <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+    <a href="./dashboard.html" class="mobile-brand">
+      <span class="brand-title">A3HAIRSTUDIO OWNER</span>
+    </a>
+    <div style="width: 38px;"></div>
+  </header>
+
+  <!-- Backdrop overlay saat drawer sidebar terbuka di layar ponsel -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <!-- ========================================================================= -->
+  <!-- APP SHELL: SIDEBAR NAVIGASI OWNER + KONTEN UTAMA                          -->
+  <!-- ========================================================================= -->
+  <div class="app-shell">
+    <!-- SIDEBAR NAVIGASI OWNER -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <div class="sidebar-header">
+        <a href="./dashboard.html" class="sidebar-brand">
+          <div class="brand-badge" style="background: linear-gradient(135deg, #E2B777, #A3783E); color: #171514;">A3</div>
+          <div class="brand-text">
+            <span class="brand-title">A3HAIRSTUDIO</span>
+            <span class="brand-subtitle">Owner Console</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-label">Operasional Kasir</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./dashboard.html" class="nav-link">
+              <span class="nav-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg></span>
+              <span>Dasbor Hari Ini</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./bookings.html" class="nav-link">
+              <span class="nav-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></span>
+              <span>Data Pemesanan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./payments.html" class="nav-link">
+              <span class="nav-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></span>
+              <span>Konfirmasi Bayar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./schedules.html" class="nav-link">
+              <span class="nav-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+              <span>Jadwal & Kapster</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-label" style="margin-top: 1.5rem;">Data Master Studio</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./services.html" class="nav-link">
+              <span class="nav-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879a3 3 0 11-4.242-4.242L12 12z"></path></svg></span>
+              <span>Layanan & Tarif</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./kapsters.html" class="nav-link">
+              <span class="nav-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></span>
+              <span>Daftar Kapster</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./loyalty.html" class="nav-link">
+              <span class="nav-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg></span>
+              <span>Aturan Poin</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./rewards.html" class="nav-link">
+              <span class="nav-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2m-14 0V9a2 2 0 012-2h10a2 2 0 012 2v3"></path></svg></span>
+              <span>Katalog Hadiah</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./redemptions.html" class="nav-link">
+              <span class="nav-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+              <span>Persetujuan Hadiah</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-label" style="margin-top: 1.5rem;">Laporan & Profil</div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./reports.html" class="nav-link">
+              <span class="nav-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></span>
+              <span>Laporan Keuangan</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./operational.html" class="nav-link active">
+              <span class="nav-icon"><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg></span>
+              <span>Info Barbershop</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Profil Owner di Bawah Sidebar -->
+      <div class="sidebar-footer">
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-avatar" style="background: linear-gradient(135deg, #E2B777, #A3783E); color: #171514; font-weight: 800;">O</div>
+          <div class="sidebar-user-details">
+            <div class="sidebar-user-name">Owner Studio</div>
+            <div class="sidebar-user-role">Owner A3HAIRSTUDIO</div>
+          </div>
+        </div>
+        <button type="button" class="sidebar-logout-btn" id="sidebar-logout-btn" title="Keluar">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- AREA KONTEN UTAMA -->
+    <div class="app-content-wrapper">
+      <main class="app-main app-main-wide">
+        <div class="owner-page-header">
+          <div>
+            <div class="brand-kicker">PROFIL STUDIO</div>
+            <h1 class="owner-page-title">Informasi Operasional Barbershop</h1>
+            <p class="owner-page-subtitle">Perbarui jam buka studio, alamat fisik, kontak layanan, dan kebijakan reservasi pelanggan.</p>
+          </div>
+        </div>
+
+        <div class="card" style="max-width: 720px;">
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Profil & Data Studio A3HAIRSTUDIO</h2>
+              <div class="card-subtitle">Perubahan pada form ini otomatis ditampilkan pada halaman Beranda & Kontak</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <form id="operational-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label required">Nama Usaha Barbershop</label>
+                  <input type="text" id="op-name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Slogan / Tagline</label>
+                  <input type="text" id="op-tagline" class="form-input">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">Alamat Lengkap Studio</label>
+                <textarea id="op-address" class="form-textarea" rows="2" required></textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label required">No. Telepon / WhatsApp Kasir</label>
+                  <input type="text" id="op-phone" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Email Studio</label>
+                  <input type="email" id="op-email" class="form-input" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label required">Jam & Hari Operasional</label>
+                  <input type="text" id="op-hours" class="form-input" placeholder="cth: Setiap Hari: 09:00 - 21:00 WIB" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Akun Instagram</label>
+                  <input type="text" id="op-ig" class="form-input" placeholder="@a3hairstudio">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Kebijakan Keterlambatan & Ketentuan Reservasi</label>
+                <textarea id="op-policy" class="form-textarea" rows="3"></textarea>
+              </div>
+
+              <div style="margin-top: 1.5rem; display: flex; justify-content: flex-end;">
+                <button type="submit" class="btn btn-primary">
+                  Simpan Perubahan Operasional
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <!-- FOOTER OWNER -->
+      <footer class="app-footer">
+        <div class="footer-content">
+          <p>&copy; 2026 <strong>A3HAIRSTUDIO</strong> &mdash; BarberBook Management Console.</p>
+          <div class="footer-links">
+            <a href="../../index.html">Lihat Beranda Publik</a>
+            <span class="separator">&bull;</span>
+            <a href="./reports.html">Laporan Keuangan</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: Menggunakan common.js                                         -->
+  <!-- ========================================================================= -->
+  <script type="module">
+    import { Auth, Storage, STORAGE_KEYS, showToast } from '../../assets/js/common.js';
+
+    // Kontrol drawer menu mobile
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const sidebar = document.getElementById('app-sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+
+    if (toggleBtn && sidebar && backdrop) {
+      toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+        backdrop.classList.toggle('open');
+      });
+      backdrop.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+        backdrop.classList.remove('open');
+      });
+    }
+
+    // Proteksi halaman Owner
+    Auth.requireOwner('./login.html');
+
+    // Logout Owner
+    document.getElementById('sidebar-logout-btn')?.addEventListener('click', () => {
+      Auth.logout();
+      window.location.href = './login.html';
+    });
+
+    // Isi formulir dari penyimpanan
+    const op = Storage.get(STORAGE_KEYS.OPERATIONAL, {});
+
+    document.getElementById('op-name').value = op.name || 'A3HAIRSTUDIO';
+    document.getElementById('op-tagline').value = op.tagline || '';
+    document.getElementById('op-address').value = op.address || '';
+    document.getElementById('op-phone').value = op.phone || '';
+    document.getElementById('op-email').value = op.email || '';
+    document.getElementById('op-hours').value = op.openingHours || '';
+    document.getElementById('op-ig').value = op.instagram || '';
+    document.getElementById('op-policy').value = op.policy || '';
+
+    document.getElementById('operational-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const updated = {
+        name: document.getElementById('op-name').value.trim(),
+        tagline: document.getElementById('op-tagline').value.trim(),
+        address: document.getElementById('op-address').value.trim(),
+        phone: document.getElementById('op-phone').value.trim(),
+        email: document.getElementById('op-email').value.trim(),
+        openingHours: document.getElementById('op-hours').value.trim(),
+        instagram: document.getElementById('op-ig').value.trim(),
+        policy: document.getElementById('op-policy').value.trim()
+      };
+
+      Storage.set(STORAGE_KEYS.OPERATIONAL, updated);
+      showToast('Informasi operasional berhasil diperbarui!', 'success');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+/* assets/css/owner.css - Owner Dashboard & Backoffice UI Specifics */
+
+/* 5 Ringkasan Statistik Hari Ini (Revisi Owner Dasbor) */
+.owner-stat-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.owner-stat-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.owner-stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.owner-stat-num {
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+.owner-stat-desc {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.35rem;
+}
+
+/* Toolbar Filter & Aksi */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.toolbar-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 340px;
+}
+
+.toolbar-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Section Header di Dasbor Owner */
+.owner-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.owner-page-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: var(--color-primary);
+}
+
+.owner-page-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Tombol Aksi di Baris Tabel */
+.row-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+/* Laporan Keuangan Bulanan Grid */
+.report-summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.report-card-kpi {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-subtle);
+  border-left: 4px solid var(--color-accent);
+}
+
+.report-card-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.report-card-val {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+/* Chart Tooltip */
+.chart-tooltip {
+  position: absolute;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  padding: 0.375rem 0.625rem;
+  border-radius: var(--radius-small);
+  font-size: 0.75rem;
+  font-weight: 600;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: var(--shadow-dropdown);
+  transform: translate(-50%, -100%);
+  margin-top: -8px;
+  display: none;
+  z-index: 10;
+}
+
+/* ==========================================================================
+   TAMPILAN SIDEBAR OWNER (KHUSUS PORTAL OWNER)
+   ========================================================================== */
+.app-sidebar {
+  width: 270px;
+  background-color: #1A1816;
+  border-right: 1px solid #2B2724;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+  z-index: 50;
+  color: #E7E5E4;
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.18);
+  font-family: var(--font-main);
+  scrollbar-width: thin;
+  scrollbar-color: #38332E transparent;
+}
+
+.app-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+.app-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.app-sidebar::-webkit-scrollbar-thumb {
+  background: #38332E;
+  border-radius: 9999px;
+}
+
+/* Header Brand Sidebar Owner */
+.app-sidebar .sidebar-header {
+  padding: 1.5rem 1.35rem;
+  border-bottom: 1px solid #2B2724;
+  background: linear-gradient(180deg, #221F1C 0%, #1A1816 100%);
+}
+
+.app-sidebar .sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.app-sidebar .brand-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #F3D39B 0%, #C99753 50%, #94672B 100%) !important;
+  color: #171514 !important;
+  box-shadow: 0 4px 12px rgba(163, 120, 62, 0.25);
+  flex-shrink: 0;
+}
+
+.app-sidebar .brand-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.app-sidebar .brand-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.app-sidebar .brand-subtitle {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #E2B777;
+  margin-top: 2px;
+}
+
+/* Navigasi Link Sidebar Owner */
+.app-sidebar .sidebar-nav {
+  padding: 1.25rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  gap: 0.15rem;
+}
+
+.app-sidebar .nav-section-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8C827A;
+  padding: 0.85rem 0.75rem 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.app-sidebar .nav-section-label:first-child {
+  margin-top: 0;
+  padding-top: 0.25rem;
+}
+
+.app-sidebar .nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.app-sidebar .nav-item {
+  margin: 0;
+  padding: 0;
+}
+
+.app-sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #B5AEA7;
+  text-decoration: none;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.app-sidebar .nav-link:hover {
+  background-color: #26221E;
+  color: #FFFFFF;
+  border-color: #38332E;
+}
+
+.app-sidebar .nav-link:hover .nav-icon {
+  color: #E2B777;
+  transform: translateX(1px);
+}
+
+.app-sidebar .nav-link.active {
+  background: linear-gradient(90deg, rgba(201, 151, 83, 0.18) 0%, rgba(201, 151, 83, 0.06) 100%);
+  color: #F8ECE0;
+  font-weight: 700;
+  border-color: rgba(201, 151, 83, 0.35);
+  box-shadow: inset 3px 0 0 #E2B777;
+}
+
+.app-sidebar .nav-link .nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #8C827A;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.app-sidebar .nav-link.active .nav-icon {
+  color: #E2B777;
+}
+
+.app-sidebar .nav-link span:not(.nav-icon) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Footer Profil Owner di Bagian Bawah Sidebar */
+.app-sidebar .sidebar-footer {
+  padding: 1.1rem 1.15rem;
+  border-top: 1px solid #2B2724;
+  background-color: #161413;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.app-sidebar .sidebar-user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.app-sidebar .sidebar-user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, #F3D39B 0%, #C99753 100%) !important;
+  color: #171514 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+
+.app-sidebar .sidebar-user-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.app-sidebar .sidebar-user-name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-sidebar .sidebar-user-role {
+  font-size: 0.6875rem;
+  color: #A8A29E;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-sidebar .sidebar-logout-btn {
+  background: #24211E;
+  border: 1px solid #38332E;
+  color: #A8A29E;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  flex-shrink: 0;
+}
+
+.app-sidebar .sidebar-logout-btn:hover {
+  background: #331A1A;
+  border-color: #7F1D1D;
+  color: #F87171;
+  transform: translateY(-1px);
+}
+
+/* Header Mobile Khusus Halaman Owner */
+.mobile-topbar {
+  background-color: #1A1816;
+  border-bottom: 1px solid #2B2724;
+  color: #FFFFFF;
+  padding: 0.85rem 1.25rem;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 45;
+}
+
+.mobile-topbar .mobile-brand .brand-title {
+  color: #FFFFFF;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  font-size: 0.95rem;
+}
+
+.mobile-topbar .mobile-menu-btn {
+  background: #24211E;
+  border: 1px solid #38332E;
+  color: #FFFFFF;
+  border-radius: 6px;
+  padding: 0.35rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(2px);
+  z-index: 48;
+}
+
+.sidebar-backdrop.open {
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .mobile-topbar {
+    display: flex;
+  }
+
+  .app-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .app-sidebar.open {
+    transform: translateX(0);
+  }
+}

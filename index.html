@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BarberBook — A3HAIRSTUDIO</title>
+  <meta name="description" content="Sistem pemesanan layanan dan pengelolaan operasional barbershop A3HAIRSTUDIO dengan manajemen booking, kapster, jadwal, pembayaran, dan program loyalty point.">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+
+  <!-- File CSS Eksternal -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+
+  <!-- ======================================================================== -->
+  <!-- TOPBAR MOBILE (Tampil hanya di layar smartphone)                         -->
+  <!-- ======================================================================== -->
+  <div class="app-topbar-mobile">
+    <a href="./index.html" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
+      <img src="./assets/images/logo.svg" alt="BarberBook" style="height:30px;width:auto;">
+    </a>
+    <button type="button" class="hamburger-btn" id="mobile-hamburger-btn" aria-label="Buka Menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </div>
+
+  <!-- Overlay latar gelap saat sidebar mobile terbuka -->
+  <div class="sidebar-overlay" id="sidebar-overlay-el"></div>
+
+  <!-- ======================================================================== -->
+  <!-- INDUK LAYOUT DENGAN SIDEBAR KIRI (Ditulis langsung di HTML)              -->
+  <!-- ======================================================================== -->
+  <div class="app-shell">
+
+    <!-- SIDEBAR NAVIGASI KIRI -->
+    <aside class="app-sidebar" id="app-sidebar-el">
+      <div class="sidebar-header">
+        <a href="./index.html" class="sidebar-logo">
+          <img src="./assets/images/logo.svg" alt="BarberBook" style="height:32px;width:auto;">
+          <div>
+            <div class="sidebar-logo-text">BarberBook</div>
+            <div class="sidebar-logo-sub">A3HAIRSTUDIO</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Menu Navigasi Publik -->
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-title">Menu Utama</div>
+        <a href="./index.html" class="sidebar-nav-link active">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+          <span>Beranda Studio</span>
+        </a>
+        <a href="./pages/public/services.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879a3 3 0 11-4.242-4.242L10.5 7.5"></path></svg>
+          <span>Layanan & Tarif</span>
+        </a>
+        <a href="./pages/public/kapsters.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+          <span>Daftar Kapster</span>
+        </a>
+
+        <div class="sidebar-nav-title">Booking</div>
+        <a href="./pages/customer/guest.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+          <span>Booking sebagai Guest</span>
+        </a>
+        <a href="./pages/customer/login.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
+          <span>Booking sebagai Member</span>
+        </a>
+      </nav>
+
+      <!-- Bagian Bawah Sidebar -->
+      <div class="sidebar-footer" style="padding: 1.25rem 1rem;">
+        <a href="./pages/owner/login.html" class="btn btn-outline btn-block btn-sm" style="justify-content:center;">
+          Masuk untuk Owner
+        </a>
+      </div>
+    </aside>
+
+    <!-- AREA KONTEN UTAMA -->
+    <div class="app-content-wrapper">
+      <main class="app-main">
+
+        <!-- SEKSI 1: HERO OPENING -->
+        <section style="padding: 3rem 0 3.5rem; border-bottom: 1px solid var(--color-border-subtle);">
+          <div style="max-width: 720px;">
+            <div class="brand-kicker" style="margin-bottom: 1rem;">
+              A3HAIRSTUDIO · KOTA MOJOKERTO
+            </div>
+            
+            <h1 style="font-size: clamp(2.25rem, 4vw, 3.25rem); font-weight: 800; line-height: 1.15; color: var(--color-primary); margin-bottom: 1.25rem;">
+              Pangkas Rambut Pria Berkelas anti menyesal
+            </h1>
+            
+            <p style="font-size: 1.125rem; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+              A3HAIRSTUDIO adalah barbershop modern yang mengutamakan ketelitian teknik potong rambut, kenyamanan studio yang higienis, dan pelayanan ramah dari para master kapster berpengalaman.
+            </p>
+          </div>
+        </section>
+
+        <!-- SEKSI 2: INFORMASI STUDIO TERGABUNG -->
+        <section id="lokasi" style="padding: 3.5rem 0 3rem; border-bottom: 1px solid var(--color-border-subtle);">
+          <div style="margin-bottom: 2rem;">
+            <div class="brand-kicker">INFORMASI STUDIO</div>
+            <h2 style="margin-top: 0.25rem;">Lokasi & Jam Layanan</h2>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem;">
+            <!-- Kartu Alamat -->
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.5rem;">
+                Alamat Barbershop
+              </div>
+              <h3 style="font-size: 1.0625rem; margin-bottom: 0.5rem;">A3HAIRSTUDIO Melawai</h3>
+              <p style="font-size: 0.875rem; line-height: 1.6; color: var(--color-text-secondary);">
+                RT.1/RW.5, Pasinan Kulon, Kupang, Kec. Jetis, Kabupaten Mojokerto, Jawa Timur 61352
+              </p>
+              <div style="margin-top: 0.75rem; font-size: 0.8125rem; color: var(--color-text-muted);">
+                Patokan: Depan Indomaret.
+              </div>
+            </div>
+
+            <!-- Kartu Jam Buka -->
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.5rem;">
+                Jam Operasional
+              </div>
+              <h3 style="font-size: 1.0625rem; margin-bottom: 0.5rem;">Buka Setiap Hari</h3>
+              <p style="font-size: 0.875rem; line-height: 1.6; color: var(--color-text-secondary);">
+                Senin s/d Minggu: <strong>09.00 – 21.00 WIB</strong>
+              </p>
+              <div style="margin-top: 0.75rem; font-size: 0.8125rem; color: var(--color-text-muted);">
+                Reservasi daring tersedia untuk kenyamanan tanpa antre lama.
+              </div>
+            </div>
+
+            <!-- Kartu Kontak -->
+            <div class="card" style="padding: 1.5rem;">
+              <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; margin-bottom: 0.5rem;">
+                Kontak Resmi
+              </div>
+              <h3 style="font-size: 1.0625rem; margin-bottom: 0.5rem;">Layanan Pelanggan</h3>
+              <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.875rem; color: var(--color-text-secondary);">
+                <div><strong>WhatsApp:</strong> 0811-1111-1111</div>
+                <div><strong>Email:</strong> a3haristudo@gmail.com</div>
+                <div><strong>Instagram:</strong> @a3hairstudio</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SEKSI 3: SHORTCUT MENU LAYANAN & KAPSTER -->
+        <section style="padding: 3rem 0 1rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem;">
+            <div class="card" style="padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="brand-kicker">MENU PERAWATAN</div>
+                <h3 style="font-size: 1.25rem; margin: 0.375rem 0 0.5rem;">Layanan & Tarif</h3>
+                <p style="font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
+                  Tersedia aneka paket Signature Haircut, Beard Grooming, Scalp Detox, hingga paket relaksasi lengkap gentleman.
+                </p>
+              </div>
+              <div>
+                <a href="./pages/public/services.html" class="btn btn-secondary btn-block">
+                  Buka Menu Layanan &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div class="card" style="padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="brand-kicker">TIM PROFESIONAL</div>
+                <h3 style="font-size: 1.25rem; margin: 0.375rem 0 0.5rem;">Master Kapster</h3>
+                <p style="font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
+                  Kenali kapster kami beserta spesialisasi gaya potongannya (classic taper, skin fade, crop, dan penataan jenggot).
+                </p>
+              </div>
+              <div>
+                <a href="./pages/public/kapsters.html" class="btn btn-secondary btn-block">
+                  Lihat Daftar Kapster &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER LANGSUNG DI HTML -->
+      <footer class="app-footer">
+        <div>
+          &copy; 2026 <strong>A3HAIRSTUDIO</strong> · BarberBook. Seluruh hak cipta dilindungi.
+        </div>
+        <div style="display:flex;gap:1rem;color:var(--color-text-muted);flex-wrap:wrap;">
+          <span>Senin - Minggu: 09.00 - 21.00 WIB</span>
+          <span>·</span>
+          <span>0812-3456-7890</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- SCRIPT INTERAKSI HAMBURGER SEDERHANA -->
+  <script>
+    const hamburgerBtn = document.getElementById('mobile-hamburger-btn');
+    const sidebarEl = document.getElementById('app-sidebar-el');
+    const overlayEl = document.getElementById('sidebar-overlay-el');
+
+    if (hamburgerBtn && sidebarEl && overlayEl) {
+      const toggleSidebar = () => {
+        sidebarEl.classList.toggle('open');
+        overlayEl.classList.toggle('open');
+      };
+      hamburgerBtn.addEventListener('click', toggleSidebar);
+      overlayEl.addEventListener('click', toggleSidebar);
+    }
+  </script>
+</body>
+</html>

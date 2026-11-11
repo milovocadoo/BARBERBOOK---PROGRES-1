@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Member — BarberBook A3HAIRSTUDIO</title>
+  <!-- Favicon & Stylesheet Utama -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/customer.css">
+</head>
+<body>
+  <!-- ========================================================================= -->
+  <!-- HEADER MOBILE (Hanya tampil pada layar smartphone)                        -->
+  <!-- ========================================================================= -->
+  <!-- TOPBAR MOBILE (Hanya muncul di smartphone) -->
+  <div class="app-topbar-mobile">
+    <a href="../../index.html" style="display:flex;align-items:center;text-decoration:none;">
+      <img src="../../assets/images/logo.svg" alt="BarberBook" style="height:28px;width:auto;">
+    </a>
+    <button type="button" class="hamburger-btn" id="mobile-hamburger-btn" aria-label="Buka Menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </div>
+
+  <!-- OVERLAY UNTUK MOBILE DRAWER -->
+  <div class="sidebar-overlay" id="sidebar-overlay-el"></div>
+
+  <!-- STRUKTUR SHELL DUA KOLOM: SIDEBAR + KONTEN -->
+  <div class="app-shell">
+    <!-- SIDEBAR NAVIGASI MEMBER -->
+    <aside class="app-sidebar" id="app-sidebar-el">
+      <div class="sidebar-header">
+        <a href="./dashboard.html" class="sidebar-logo">
+          <img src="../../assets/images/logo.svg" alt="BarberBook" style="height:32px;width:auto;">
+          <div>
+            <div class="sidebar-logo-text">BarberBook</div>
+            <div class="sidebar-logo-sub">A3HAIRSTUDIO</div>
+          </div>
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-title">Menu Pelanggan</div>
+        <a href="./dashboard.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+          <span>Dasbor Member</span>
+        </a>
+        <a href="./booking.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+          <span>Pesan Jadwal</span>
+        </a>
+        <a href="./booking-history.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+          <span>Riwayat Pemesanan</span>
+        </a>
+        <a href="./loyalty.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+          <span>Poin Loyalitas</span>
+        </a>
+        <a href="./rewards.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          <span>Hadiah Member</span>
+        </a>
+
+        <div class="sidebar-nav-title">Navigasi</div>
+        <a href="../../index.html" class="sidebar-nav-link">
+          <svg class="sidebar-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m7-7m-7 7h18"></path></svg>
+          <span>Kembali ke Halaman Utama</span>
+        </a>
+      </nav>
+
+      <!-- Profil Member di Bawah Sidebar -->
+      <div class="sidebar-footer">
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-avatar" id="sidebar-user-avatar">M</div>
+          <div class="sidebar-user-details">
+            <div class="sidebar-user-name" id="sidebar-user-name">Member BarberBook</div>
+            <div class="sidebar-user-role" id="sidebar-user-role">Member A3HAIRSTUDIO</div>
+          </div>
+        </div>
+        <button type="button" class="sidebar-logout-btn" id="sidebar-logout-btn" title="Keluar">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- AREA KONTEN UTAMA -->
+    <div class="app-content-wrapper">
+      <main class="app-main">
+        <div style="margin-bottom: 2rem;">
+          <div class="brand-kicker">PENGATURAN AKUN</div>
+          <h1 style="font-size: 1.875rem; margin-top: 0.25rem;">Profil Member</h1>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted);">
+            Perbarui data identitas Anda untuk mempermudah reservasi dan melihat saldo poin Anda.
+          </p>
+        </div>
+
+        <div class="card" style="max-width: 620px;">
+          <div class="card-body" style="padding: 2rem;">
+            <form id="profile-form">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--color-border-subtle); flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; align-items: center; gap: 1.25rem;">
+                  <div class="kapster-avatar" style="width: 64px; height: 64px; margin: 0; font-size: 1.5rem;" id="profile-avatar-display">
+                    M
+                  </div>
+                  <div>
+                    <div style="font-weight: 700; font-size: 1.125rem;" id="profile-name-title">Member</div>
+                    <div style="font-size: 0.8125rem; color: var(--color-text-muted);" id="profile-email-subtitle">member@example.com</div>
+                  </div>
+                </div>
+                <div id="prof-points-badge" style="font-size: 0.9375rem; font-weight: 700; color: var(--color-accent); background: #FAF5EB; padding: 0.35rem 0.75rem; border-radius: var(--radius-small); border: 1px solid #EAD8B5;">
+                  ★ 0 Pts
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">Nama Lengkap</label>
+                <input type="text" id="prof-name" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">Alamat Email (Akun Google)</label>
+                <input type="email" id="prof-email" class="form-input" required readonly style="background: var(--color-surface-subtle); color: var(--color-text-muted);">
+                <div class="form-hint">Email terhubung dengan simulasi otentikasi Google.</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required">Nomor WhatsApp / Telepon</label>
+                <input type="tel" id="prof-phone" class="form-input" required>
+                <div class="form-hint">Digunakan saat melakukan konfirmasi jadwal pangkas.</div>
+              </div>
+
+              <div style="margin-top: 2rem; display: flex; justify-content: flex-end; gap: 0.75rem;">
+                <a href="dashboard.html" class="btn btn-outline">Batal</a>
+                <button type="submit" class="btn btn-primary">Simpan Profil</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <!-- FOOTER SEDERHANA -->
+      <footer class="app-footer">
+        <div class="footer-content">
+          <p>&copy; 2026 <strong>A3HAIRSTUDIO</strong> &mdash; BarberBook Reservation System. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="../../index.html#lokasi">Lokasi & Kontak</a>
+            <span class="separator">&bull;</span>
+            <a href="../public/services.html">Layanan</a>
+            <span class="separator">&bull;</span>
+            <a href="../owner/login.html">Portal Owner</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: Menggunakan common.js dan customer.js                         -->
+  <!-- ========================================================================= -->
+  <script type="module">
+    import { Auth } from '../../assets/js/common.js';
+    import { CustomerApp } from '../../assets/js/customer.js';
+
+    // Kontrol drawer menu mobile
+    const hamburgerBtn = document.getElementById('mobile-hamburger-btn');
+    const sidebarEl = document.getElementById('app-sidebar-el');
+    const overlayEl = document.getElementById('sidebar-overlay-el');
+
+    if (hamburgerBtn && sidebarEl && overlayEl) {
+      const toggle = () => {
+        sidebarEl.classList.toggle('open');
+        overlayEl.classList.toggle('open');
+      };
+      hamburgerBtn.addEventListener('click', toggle);
+      overlayEl.addEventListener('click', toggle);
+    }
+
+    // Proteksi halaman hanya untuk Member
+    const user = Auth.requireMember('./login.html');
+    if (user) {
+      const nameEl = document.getElementById('sidebar-user-name');
+      const avatarEl = document.getElementById('sidebar-user-avatar');
+      const roleEl = document.getElementById('sidebar-user-role');
+      const nameTitle = document.getElementById('profile-name-title');
+      const emailSubtitle = document.getElementById('profile-email-subtitle');
+      const avatarDisplay = document.getElementById('profile-avatar-display');
+
+      if (nameEl) nameEl.textContent = user.name;
+      if (avatarEl) avatarEl.textContent = (user.name || 'M').charAt(0).toUpperCase();
+      if (roleEl) roleEl.textContent = `Member · ★ ${user.points || 0} Pts`;
+      if (nameTitle) nameTitle.textContent = user.name;
+      if (emailSubtitle) emailSubtitle.textContent = user.email || '';
+      if (avatarDisplay) avatarDisplay.textContent = (user.name || 'M').charAt(0).toUpperCase();
+
+      document.getElementById('sidebar-logout-btn')?.addEventListener('click', () => {
+        Auth.logout();
+        window.location.href = '../../index.html';
+      });
+
+      // Jalankan logika profil pelanggan
+      CustomerApp.initCustomerProfile();
+    }
+  </script>
+</body>
+</html>

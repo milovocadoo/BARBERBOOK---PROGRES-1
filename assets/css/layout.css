@@ -1,0 +1,312 @@
+/* assets/css/layout.css - Sidebar Navigation Layout & Responsive Architecture */
+
+/* Struktur Induk Aplikasi (Sidebar di Sisi Kiri) */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-secondary);
+}
+
+/* Sidebar Navigasi Utama Kiri */
+.app-sidebar {
+  width: 255px;
+  flex-shrink: 0;
+  background-color: #FFFFFF;
+  border-right: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 50;
+  box-shadow: 1px 0 3px rgba(28, 25, 23, 0.02);
+}
+
+/* Bagian Logo / Brand Header di Sidebar */
+.sidebar-header {
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sidebar-logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
+.sidebar-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-brand-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.sidebar-brand-sub {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* Navigasi Link di Sidebar */
+.sidebar-nav {
+  padding: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.sidebar-nav-title {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  padding: 0.75rem 0.625rem 0.35rem;
+}
+
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: var(--radius-small);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: var(--transition-smooth);
+}
+
+.sidebar-nav-link:hover {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-primary);
+}
+
+.sidebar-nav-link.active {
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.sidebar-nav-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.sidebar-nav-link.active .sidebar-nav-icon {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+/* Footer Sidebar (Info Pengguna / Akses Cepat) */
+.sidebar-footer {
+  padding: 1rem 1.125rem;
+  border-top: 1px solid var(--color-border-subtle);
+  background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.sidebar-user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.sidebar-user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, #FAF6EF 0%, #EFE8DC 100%);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border-strong);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.sidebar-user-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar-user-name {
+  font-size: 0.84375rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-user-role {
+  font-size: 0.71875rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-logout-btn {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.sidebar-logout-btn:hover {
+  background: #FEE2E2;
+  border-color: #FCA5A5;
+  color: #DC2626;
+}
+
+/* Area Konten Utama */
+.app-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+/* Topbar Mobile (Hanya muncul di layar smartphone/tablet) */
+.app-topbar-mobile,
+.mobile-header {
+  display: none !important;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.875rem 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 45;
+}
+
+.hamburger-btn,
+.mobile-hamburger-btn {
+  padding: 0.375rem;
+  border-radius: var(--radius-small);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Main Container Konten */
+.app-main {
+  flex: 1;
+  padding: 2.5rem 2.5rem 4rem;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.app-main-narrow {
+  max-width: 760px;
+}
+
+.app-main-wide {
+  max-width: 1240px;
+}
+
+/* Footer Sederhana & Bersih */
+.app-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+  padding: 1.5rem 2.5rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Overlay Gelap Mobile Drawer */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(28, 25, 23, 0.4);
+  z-index: 49;
+  backdrop-filter: blur(2px);
+}
+
+.sidebar-overlay.open {
+  display: block;
+}
+
+/* Penyesuaian Responsif Tablet & Smartphone */
+@media (max-width: 860px) {
+  .app-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .app-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .app-topbar-mobile,
+  .mobile-header {
+    display: flex !important;
+  }
+
+  .app-main {
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  .app-footer {
+    padding: 1.25rem;
+    flex-direction: column;
+    text-align: center;
+  }
+}

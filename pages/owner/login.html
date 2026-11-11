@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk Owner — BarberBook A3HAIRSTUDIO</title>
+  <!-- Favicon & Stylesheet Utama -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/owner.css">
+</head>
+<body style="background-color: #171514; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 1.5rem;">
+
+  <div style="width: 100%; max-width: 420px;">
+    <div style="background-color: #24211E; border: 1px solid #38332E; border-radius: var(--radius-large); padding: 2.5rem 2rem; box-shadow: var(--shadow-lg);">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div style="display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+          <img src="../../assets/images/logo.svg" alt="A3HAIRSTUDIO" style="height: 38px; width: auto; filter: brightness(0) invert(1);">
+        </div>
+        <div style="font-size: 0.6875rem; color: #E2B777; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">PORTAL ADMINISTRATIF</div>
+        <h1 style="color: #FFFFFF; font-size: 1.5rem; margin-top: 0.25rem;">Owner Console</h1>
+        <p style="color: #A8A29E; font-size: 0.8125rem; margin-top: 0.375rem;">
+          Kelola reservasi, verifikasi pembayaran kasir, kapster, dan pantau laporan keuangan bulanan.
+        </p>
+      </div>
+
+      <!-- Panduan Kredensial Akses Owner -->
+      <div style="background: rgba(163, 120, 62, 0.15); border: 1px solid rgba(163, 120, 62, 0.3); border-radius: var(--radius-small); padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.75rem; color: #E2B777;">
+        <strong>Kredensial Akses Owner Studio:</strong><br>
+        Email: <code>owner@a3hairstudio.com</code><br>
+        Password: <code>admin123</code>
+      </div>
+
+      <form id="owner-login-form">
+        <div class="form-group">
+          <label class="form-label required" style="color: #E7E5E4;">Email Owner</label>
+          <input type="text" id="owner-user" class="form-input" style="background: #171514; border-color: #38332E; color: #FFF;" value="owner@a3hairstudio.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label required" style="color: #E7E5E4;">Kata Sandi</label>
+          <input type="password" id="owner-pass" class="form-input" style="background: #171514; border-color: #38332E; color: #FFF;" value="admin123" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1.25rem; padding: 0.875rem; justify-content: center;">
+          Masuk ke Dasbor Owner &rarr;
+        </button>
+      </form>
+
+      <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid #38332E; text-align: center;">
+        <a href="../../index.html" style="font-size: 0.8125rem; color: #A8A29E; text-decoration: none;">
+          &larr; Kembali ke Beranda Utama
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: Menggunakan common.js                                         -->
+  <!-- ========================================================================= -->
+  <script type="module">
+    import { Auth, showToast } from '../../assets/js/common.js';
+
+    document.getElementById('owner-login-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const user = document.getElementById('owner-user').value.trim();
+      const pass = document.getElementById('owner-pass').value;
+
+      const res = Auth.loginOwner(user, pass);
+      if (res.success) {
+        showToast('Login Owner Berhasil!', 'success');
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 400);
+      } else {
+        showToast(res.message, 'error');
+      }
+    });
+  </script>
+</body>
+</html>
